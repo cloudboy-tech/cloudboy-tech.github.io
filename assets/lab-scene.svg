@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-labelledby="title desc">
 <title id="title">Инженерная лаборатория Cloudboy</title>
-<desc id="desc">На лабораторном столе работает терминал, слева серверная стойка. От неё к двум испытательным сосудам идут светящиеся линии передачи данных. На экране движется текст, лампочки мигают, в колбах поднимаются пузырьки.</desc>
+<desc id="desc">Инженерная лаборатория: серверная стойка, терминал и две колбы на общем стенде. От верхней шины опускаются вертикальные линии передачи данных точно в центры сосудов. Индикаторы, терминал и пузырьки анимированы.</desc>
 <defs>
 <linearGradient id="rackSteel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#243858"/><stop offset=".38" stop-color="#17253e"/><stop offset="1" stop-color="#0e1729"/></linearGradient>
 <linearGradient id="screenGlass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#142640"/><stop offset="1" stop-color="#081322"/></linearGradient>
@@ -29,33 +29,42 @@
 @keyframes scopePulse{0%,100%{opacity:.55}50%{opacity:1}}
 @media(prefers-reduced-motion:reduce){.status-led,.pipe-flow,.terminal-scroll,.cursor,.bubble,.fluid-shimmer,.scope{animation:none!important}}
 </style>
-<ellipse cx="317" cy="313" rx="220" ry="71" fill="url(#screenBloom)"/>
+<ellipse cx="310" cy="304" rx="196" ry="67" fill="url(#screenBloom)"/>
+<ellipse cx="304" cy="357" rx="238" ry="12" fill="#5a88bf" opacity=".10"/>
+<path d="M42 365H537" fill="none" stroke="#577aa8" stroke-width="1" opacity=".28"/>
 <ellipse cx="424" cy="246" rx="122" ry="154" fill="url(#lampPool)"/>
-<g fill="none" stroke="#314462" opacity=".30" stroke-width="1"><path d="M34 106H532M34 339H532"/><path d="M50 90V329M528 95V323"/><path d="M65 336H511M101 354H486" stroke-dasharray="3 8"/></g>
+<g fill="none" stroke="#314462" opacity=".30" stroke-width="1"><path d="M34 106H532M34 339H532"/><path d="M50 90V329M528 95V323"/><path d="M65 373H511" stroke-dasharray="3 8"/></g>
 <path d="M435 0V52" stroke="#455f83" stroke-width="2.5"/>
 <path d="M408 69L421 47H449L463 69Z" fill="#1e304e" stroke="#6782af" stroke-width="1.4"/>
 <path d="M419 69H452" stroke="#b7cff4" stroke-opacity=".6" stroke-width="2"/>
 <ellipse cx="435" cy="73" rx="21" ry="4" fill="#ecc790" opacity=".23"/>
-<path d="M414 76L380 221H509L453 76Z" fill="#e9b976" opacity=".025"/>
-<!-- Orthogonal distribution bus: one rack, two connected sample vessels. -->
-<g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M181 170H190V95H506" stroke="#263b5d" stroke-width="9"/>
-<path d="M443 95V198" stroke="#263b5d" stroke-width="9"/>
-<path d="M506 95V202" stroke="#263b5d" stroke-width="9"/>
-<path d="M181 170H190V95H506" stroke="#6386b2" stroke-width="3"/>
-<path d="M443 95V198" stroke="#6386b2" stroke-width="3"/>
-<path d="M506 95V202" stroke="#6b68ad" stroke-width="3"/>
-<path d="M181 170H190V95H506" stroke="#72d9ff" stroke-width="2.8" opacity=".42" filter="url(#pipeBloom)"/>
-<path class="pipe-flow" d="M181 170H190V95H506" stroke="#89e6ff" stroke-width="2.4"/>
-<path class="pipe-flow" d="M443 95V198" stroke="#89e6ff" stroke-width="2.4"/>
-<path class="pipe-flow secondary" d="M506 95V202" stroke="#c6b4ff" stroke-width="2.4"/>
+<path d="M419 77L391 238H488L450 77Z" fill="#e9b976" opacity=".018"/>
+<!-- A straight overhead bus connected to the rack, with a centered drop into each vessel. -->
+<g fill="none" stroke-linejoin="round" stroke-linecap="square">
+<path d="M180 170H194V98H505" stroke="#263b5d" stroke-width="8"/>
+<path d="M441 98V205" stroke="#263b5d" stroke-width="8"/>
+<path d="M505 98V205" stroke="#263b5d" stroke-width="8"/>
+<path d="M180 170H194V98H505" stroke="#607fae" stroke-width="2.6"/>
+<path d="M441 98V205" stroke="#607fae" stroke-width="2.6"/>
+<path d="M505 98V205" stroke="#7168ad" stroke-width="2.6"/>
+<path d="M180 170H194V98H505" stroke="#72d9ff" stroke-width="2.5" opacity=".34" filter="url(#pipeBloom)"/>
+<path class="pipe-flow" d="M180 170H194V98H505" stroke="#89d9f6" stroke-width="2"/>
+<path class="pipe-flow" d="M441 98V205" stroke="#89d9f6" stroke-width="2"/>
+<path class="pipe-flow secondary" d="M505 98V205" stroke="#afa1fb" stroke-width="2"/>
 </g>
-<g fill="#0b1829" stroke="#7a98c4" stroke-width="1.5"><circle cx="181" cy="170" r="7"/><circle cx="443" cy="198" r="6"/><circle cx="506" cy="202" r="6"/></g>
-<g fill="#8db7f2"><circle cx="181" cy="170" r="2.2"/></g>
+<g fill="#0b1829" stroke="#7a98c4" stroke-width="1.5">
+<circle cx="180" cy="170" r="6"/>
+<circle cx="441" cy="98" r="3.5"/>
+<circle cx="505" cy="98" r="3.5"/>
+</g>
+<circle cx="180" cy="170" r="2" fill="#8db7f2"/>
+
 <g id="rack">
 <rect x="58" y="125" width="123" height="191" rx="9" fill="url(#rackSteel)" stroke="#6e83a8" stroke-width="1.6"/>
 <path d="M66 134H174V307H66Z" fill="#0b1424" stroke="#344764"/>
 <rect x="70" y="138" width="100" height="23" rx="4" fill="#15233a" stroke="#334b72"/>
+<path d="M81 149H112M81 154H103" stroke="#526f9c" opacity=".70" stroke-width="1.2"/>
+<circle cx="148" cy="150" r="2.5" fill="#6ecbe9" opacity=".55"/>
 <rect x="70" y="168" width="100" height="29" rx="4" fill="#13213a" stroke="#30466b"/>
 <rect x="70" y="204" width="100" height="29" rx="4" fill="#13213a" stroke="#30466b"/>
 <rect x="70" y="240" width="100" height="29" rx="4" fill="#13213a" stroke="#30466b"/>
@@ -64,12 +73,15 @@
 
 <g fill="#75dcff"><circle class="status-led" cx="152" cy="183" r="3"/><circle class="status-led offset" cx="152" cy="219" r="3"/><circle class="status-led slow" cx="152" cy="255" r="3"/></g>
 <g fill="#7993c0"><circle cx="142" cy="183" r="2"/><circle cx="142" cy="219" r="2"/><circle cx="142" cy="255" r="2"/></g>
-<g font-family="monospace" font-size="9.5" fill="#94aed2"><text x="81" y="154">CB / RACK-01</text><text x="81" y="291">03 NODES</text></g>
-<path d="M65 316V328M174 316V328" stroke="#344e78" stroke-width="4" stroke-linecap="round"/>
+
+<path d="M68 316V359M170 316V359" stroke="#344e78" stroke-width="6" stroke-linecap="round"/>
+<path d="M61 360H78M163 360H178" stroke="#5a769f" stroke-width="3" stroke-linecap="round"/>
 </g>
-<path d="M195 294H524L535 303H199Z" fill="url(#deskSteel)" stroke="#5a7198" stroke-width="1.3"/>
-<path d="M204 303H528V318H204Z" fill="#15233a" stroke="#344b6e"/>
-<path d="M218 318V351M515 318V350" stroke="#2b4367" stroke-width="6" stroke-linecap="round"/>
+<!-- One continuous tabletop with an aligned apron and two feet on the floor line. -->
+<path d="M194 290H524L534 301H184Z" fill="url(#deskSteel)" stroke="#5a7198" stroke-width="1.3"/>
+<path d="M184 301H534V316H184Z" fill="#14233b" stroke="#344b6e" stroke-width="1.2"/>
+<path d="M204 316V359M514 316V359" stroke="#2b4367" stroke-width="6" stroke-linecap="round"/>
+<path d="M197 360H211M507 360H521" stroke="#5a769f" stroke-width="3" stroke-linecap="round"/>
 <g id="terminal">
 <rect x="202" y="126" width="169" height="128" rx="12" fill="#18283f" stroke="#7489b1" stroke-width="1.8"/>
 <rect x="211" y="135" width="151" height="110" rx="6" fill="url(#screenGlass)" stroke="#304e78"/>
@@ -81,7 +93,7 @@
 <g class="terminal-scroll">
 <text x="222" y="176" fill="#80c4ff">$ labctl start</text>
 <text x="222" y="190">connecting nodes...</text>
-<text x="222" y="204" fill="#7fdfd8">✓ rack linked</text>
+<text x="222" y="204" fill="#7fdfd8">rack linked: OK</text>
 <text x="222" y="218">01101001 11010010</text>
 <text x="222" y="232" fill="#a6b9ff">$ test storage</text>
 <text x="222" y="246" fill="#8cd9f2">stream: active</text>
@@ -89,7 +101,7 @@
 <text x="222" y="274" fill="#7fdfd8">sample collected</text>
 <text x="222" y="288" fill="#a6b9ff">$ next experiment</text>
 <text x="222" y="302">01100101 01100001</text>
-<text x="222" y="316" fill="#7fdfd8">✓ running</text>
+<text x="222" y="316" fill="#7fdfd8">status: running</text>
 </g></g>
 
 <path d="M277 254V270H297V254" fill="#243b5d" stroke="#405c83"/>
@@ -100,23 +112,24 @@
 <g id="sampleA">
 <ellipse cx="442" cy="296" rx="43" ry="6" fill="#70a9e5" opacity=".1"/>
 <path d="M429 203V222L405 275Q402 288 417 288H466Q481 288 479 275L453 222V203" fill="#6eb5ff" fill-opacity=".035" stroke="#8ab9e9" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M425 203H457M427 210H455" stroke="#c4d7fa" stroke-width="3" stroke-linecap="round"/>
+<path d="M428 205H454M430 212H452" stroke="#c4d7fa" stroke-width="2.6" stroke-linecap="round"/>
+<rect x="437" y="203" width="8" height="8" rx="1.6" fill="#213754" stroke="#92bbeb" stroke-width="1.1"/>
 <g clip-path="url(#blueFluidClip)">
 <path class="fluid-shimmer" d="M400 261Q420 254 443 261T486 261V297H400Z" fill="url(#cyanLiquid)"/>
 <path d="M399 261Q420 254 443 261T487 261" fill="none" stroke="#a9f5ff" stroke-width="2" opacity=".75"/>
 <g fill="#dcfbff"><circle class="bubble" cx="432" cy="278" r="2"/><circle class="bubble b2" cx="452" cy="284" r="2.7"/><circle class="bubble b3" cx="442" cy="272" r="1.5"/><circle class="bubble b4" cx="460" cy="274" r="1.6"/></g></g>
 <g stroke="#9ac2ec" stroke-width="1.4" opacity=".7"><path d="M460 238H467M462 247H469M465 256H472"/></g>
-<text x="442" y="333" text-anchor="middle" font-family="monospace" font-size="8.5" letter-spacing="1.1" fill="#9bb9dc">SAMPLE 01</text>
+
 </g>
 <g id="sampleB">
 <rect x="491" y="214" width="28" height="74" rx="14" fill="#7d86da" fill-opacity=".045" stroke="#afa9e6" stroke-width="2.2"/>
 <rect x="487" y="204" width="36" height="10" rx="3" fill="#263858" stroke="#a5a8d7" stroke-width="1.5"/>
-<path d="M493 204V195M517 204V195" stroke="#a5a8d7" stroke-width="2"/>
+<rect x="501" y="203" width="8" height="8" rx="1.6" fill="#242e56" stroke="#b1a7e7" stroke-width="1.1"/>
 <g clip-path="url(#purpleFluidClip)">
 <path class="fluid-shimmer" d="M487 248Q503 244 521 248V290H487Z" fill="url(#indigoLiquid)"/>
 <g fill="#e4d8ff"><circle class="bubble b2" cx="503" cy="272" r="1.8"/><circle class="bubble b4" cx="509" cy="280" r="2.1"/></g></g>
-<text x="506" y="333" text-anchor="middle" font-family="monospace" font-size="8.5" letter-spacing=".6" fill="#acafd9">02</text>
+
 </g>
-<g font-family="ui-monospace,monospace" font-size="9" fill="#7893b8" letter-spacing="1"><text x="60" y="116">COMPUTE</text><text x="206" y="116">CONTROL / TEST</text></g>
-<g opacity=".72" fill="#7aa7e1"><circle cx="34" cy="142" r="1.5"/><circle cx="536" cy="126" r="1.5"/><circle cx="216" cy="72" r="1.2"/></g>
+
+
 </svg>
