@@ -48,21 +48,21 @@
 <path d="M419 77L391 238H488L450 77Z" fill="#e9b976" opacity=".018"/>
 <!-- A straight overhead bus connected to the rack, with a centered drop into each vessel. -->
 <g fill="none" stroke-linejoin="round" stroke-linecap="square">
-<path d="M180 170H194V98H505" stroke="#263b5d" stroke-width="8"/>
+<path d="M180 170H194V98H491" stroke="#263b5d" stroke-width="8"/>
 <path d="M441 98V205" stroke="#263b5d" stroke-width="8"/>
-<path d="M505 98V165" stroke="#263b5d" stroke-width="8"/>
-<path d="M180 170H194V98H505" stroke="#607fae" stroke-width="2.6"/>
+<path d="M491 98V165" stroke="#263b5d" stroke-width="8"/>
+<path d="M180 170H194V98H491" stroke="#607fae" stroke-width="2.6"/>
 <path d="M441 98V205" stroke="#607fae" stroke-width="2.6"/>
-<path d="M505 98V165" stroke="#607fae" stroke-width="2.6"/>
-<path d="M180 170H194V98H505" stroke="#72d9ff" stroke-width="2.5" opacity=".34" filter="url(#pipeBloom)"/>
-<path class="pipe-flow" d="M180 170H194V98H505" stroke="#89d9f6" stroke-width="2"/>
+<path d="M491 98V165" stroke="#607fae" stroke-width="2.6"/>
+<path d="M180 170H194V98H491" stroke="#72d9ff" stroke-width="2.5" opacity=".34" filter="url(#pipeBloom)"/>
+<path class="pipe-flow" d="M180 170H194V98H491" stroke="#89d9f6" stroke-width="2"/>
 <path class="pipe-flow" d="M441 98V205" stroke="#89d9f6" stroke-width="2"/>
-<path class="pipe-flow" d="M505 98V165" stroke="#89d9f6" stroke-width="2"/>
+<path class="pipe-flow" d="M491 98V165" stroke="#89d9f6" stroke-width="2"/>
 </g>
 <g fill="#0b1829" stroke="#7a98c4" stroke-width="1.5">
 <circle cx="180" cy="170" r="6"/>
 <circle cx="441" cy="98" r="3.5"/>
-<circle cx="505" cy="98" r="3.5"/>
+<circle cx="491" cy="98" r="3.5"/>
 </g>
 <circle cx="180" cy="170" r="2" fill="#8db7f2"/>
 
@@ -85,8 +85,8 @@
 <path d="M61 360H78M163 360H178" stroke="#5a769f" stroke-width="3" stroke-linecap="round"/>
 </g>
 <!-- One continuous tabletop with an aligned apron and two feet on the floor line. -->
-<path d="M194 290H524L534 301H184Z" fill="url(#deskSteel)" stroke="#5a7198" stroke-width="1.3"/>
-<path d="M184 301H534V316H184Z" fill="#14233b" stroke="#344b6e" stroke-width="1.2"/>
+<path d="M194 290H532L542 301H184Z" fill="url(#deskSteel)" stroke="#5a7198" stroke-width="1.3"/>
+<path d="M184 301H542V316H184Z" fill="#14233b" stroke="#344b6e" stroke-width="1.2"/>
 <path d="M204 316V359M514 316V359" stroke="#2b4367" stroke-width="6" stroke-linecap="round"/>
 <path d="M197 360H211M507 360H521" stroke="#5a769f" stroke-width="3" stroke-linecap="round"/>
 <g id="terminal">
@@ -130,26 +130,26 @@
 </g>
 <!-- The reaction tube hangs in a clamp above a small alcohol burner. -->
 <g id="sampleB-stand">
-  <path d="M532 185V290" fill="none" stroke="#364e74" stroke-width="5" stroke-linecap="round"/>
-  <path d="M532 185V290" fill="none" stroke="#7b96bc" stroke-width="1.5" stroke-linecap="round" opacity=".75"/>
-  <rect x="521" y="284" width="23" height="7" rx="3.5" fill="#1c304e" stroke="#57759e" stroke-width="1.4"/>
-  <path d="M532 189H520" fill="none" stroke="#6f8dbb" stroke-width="4" stroke-linecap="round"/>
-  <path d="M519 184V196" fill="none" stroke="#88a4cb" stroke-width="2" stroke-linecap="round"/>
-  <path d="M491 190Q505 183 519 190" fill="none" stroke="#83a2cd" stroke-width="2" opacity=".7"/>
+  <path d="M516 187V285" fill="none" stroke="#364e74" stroke-width="5" stroke-linecap="round"/>
+  <path d="M516 187V285" fill="none" stroke="#7b96bc" stroke-width="1.5" stroke-linecap="round" opacity=".75"/>
+  <rect x="504" y="284" width="23" height="7" rx="3.5" fill="#1c304e" stroke="#57759e" stroke-width="1.4"/>
+  <path d="M516 189H505" fill="none" stroke="#6f8dbb" stroke-width="4" stroke-linecap="round"/>
+  <path d="M505 184V196" fill="none" stroke="#88a4cb" stroke-width="2" stroke-linecap="round"/>
+  <path d="M477 190Q491 183 505 190" fill="none" stroke="#83a2cd" stroke-width="2" opacity=".7"/>
 </g>
-<g id="sampleB-burner">
+<g id="sampleB-burner" transform="translate(-14 0)">
   <ellipse class="burner-glow" cx="505" cy="271" rx="31" ry="32" fill="url(#flameHalo)"/>
   <g class="burner-flame">
-    <path d="M505 276C494 272 493 265 498 257C501 252 502 249 501 245C511 250 516 256 515 263C519 270 512 275 505 276Z" fill="url(#flameOuter)" opacity=".97"/>
+    <path d="M505 276C498 273 495 268 499 263C501 260 502 257 502 255C508 259 514 266 513 270C515 273 511 276 505 276Z" fill="url(#flameOuter)" opacity=".97"/>
   </g>
   <g class="burner-flame-inner">
-    <path d="M505 275C500 270 501 267 504 262C505 259 506 257 506 254C512 261 513 267 510 272Z" fill="#fff0b3" opacity=".96"/>
+    <path d="M505 275C502 272 502 268 505 264C506 262 506 260 506 259C511 265 511 270 509 273Z" fill="#fff0b3" opacity=".96"/>
   </g>
   <rect x="501" y="275" width="8" height="9" rx="2" fill="#30476a" stroke="#708eae" stroke-width="1"/>
   <path d="M496 284H514V288H496Z" fill="#20334d" stroke="#7690b4" stroke-width="1.2"/>
   <ellipse cx="505" cy="289.5" rx="13" ry="2.5" fill="#263b5a" stroke="#56749c" stroke-width="1.2"/>
 </g>
-<g id="sampleB" transform="translate(0 -40)">
+<g id="sampleB" transform="translate(-14 -40)">
 <rect x="491" y="214" width="28" height="74" rx="14" fill="#6eb5ff" fill-opacity=".035" stroke="#8ab9e9" stroke-width="2.2"/>
 <rect x="487" y="204" width="36" height="10" rx="3" fill="#263858" stroke="#92bbeb" stroke-width="1.5"/>
 <rect x="501" y="203" width="8" height="8" rx="1.6" fill="#213754" stroke="#92bbeb" stroke-width="1.1"/>
