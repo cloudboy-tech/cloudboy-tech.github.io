@@ -10,7 +10,7 @@
 <radialGradient id="screenBloom"><stop stop-color="#3d8fda" stop-opacity=".25"/><stop offset="1" stop-color="#3d8fda" stop-opacity="0"/></radialGradient>
 <radialGradient id="lampPool"><stop stop-color="#f7ca85" stop-opacity=".20"/><stop offset="1" stop-color="#f7ca85" stop-opacity="0"/></radialGradient>
 <filter id="pipeBloom" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
-<clipPath id="terminalClip"><rect x="222" y="144" width="133" height="91" rx="4"/></clipPath>
+<clipPath id="terminalClip"><rect x="222" y="162" width="133" height="73" rx="4"/></clipPath>
 <clipPath id="blueFluidClip"><path d="M429 203V222L405 275Q404 288 416 288H468Q480 288 479 275L453 222V203Z"/></clipPath>
 <clipPath id="purpleFluidClip"><rect x="491" y="214" width="28" height="74" rx="14"/></clipPath>
 </defs>
@@ -37,17 +37,21 @@
 <path d="M419 69H452" stroke="#b7cff4" stroke-opacity=".6" stroke-width="2"/>
 <ellipse cx="435" cy="73" rx="21" ry="4" fill="#ecc790" opacity=".23"/>
 <path d="M414 76L380 221H509L453 76Z" fill="#e9b976" opacity=".025"/>
+<!-- Orthogonal distribution bus: one rack, two connected sample vessels. -->
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M173 170C193 170 185 104 230 104H409Q443 104 443 138V203" stroke="#263b5d" stroke-width="10"/>
-<path d="M173 170C193 170 185 104 230 104H409Q443 104 443 138V203" stroke="#6386b2" stroke-width="3.2"/>
-<path d="M173 170C193 170 185 104 230 104H409Q443 104 443 138V203" stroke="#72d9ff" stroke-width="2.7" opacity=".65" filter="url(#pipeBloom)"/>
-<path class="pipe-flow" d="M173 170C193 170 185 104 230 104H409Q443 104 443 138V203" stroke="#89e6ff" stroke-width="2.5"/>
-<path d="M173 244C203 244 191 360 248 360H501Q506 360 506 343V214" stroke="#263b5d" stroke-width="9"/>
-<path d="M173 244C203 244 191 360 248 360H501Q506 360 506 343V214" stroke="#506d9c" stroke-width="3"/>
-<path class="pipe-flow secondary" d="M173 244C203 244 191 360 248 360H501Q506 360 506 343V214" stroke="#b6aaff" stroke-width="2.4"/>
+<path d="M181 170H190V95H506" stroke="#263b5d" stroke-width="9"/>
+<path d="M443 95V198" stroke="#263b5d" stroke-width="9"/>
+<path d="M506 95V202" stroke="#263b5d" stroke-width="9"/>
+<path d="M181 170H190V95H506" stroke="#6386b2" stroke-width="3"/>
+<path d="M443 95V198" stroke="#6386b2" stroke-width="3"/>
+<path d="M506 95V202" stroke="#6b68ad" stroke-width="3"/>
+<path d="M181 170H190V95H506" stroke="#72d9ff" stroke-width="2.8" opacity=".42" filter="url(#pipeBloom)"/>
+<path class="pipe-flow" d="M181 170H190V95H506" stroke="#89e6ff" stroke-width="2.4"/>
+<path class="pipe-flow" d="M443 95V198" stroke="#89e6ff" stroke-width="2.4"/>
+<path class="pipe-flow secondary" d="M506 95V202" stroke="#c6b4ff" stroke-width="2.4"/>
 </g>
-<g fill="#0b1829" stroke="#7a98c4" stroke-width="1.5"><circle cx="173" cy="170" r="7"/><circle cx="173" cy="244" r="7"/><circle cx="443" cy="200" r="6"/><circle cx="506" cy="214" r="6"/></g>
-<g fill="#8db7f2"><circle cx="173" cy="170" r="2.2"/><circle cx="173" cy="244" r="2.2"/></g>
+<g fill="#0b1829" stroke="#7a98c4" stroke-width="1.5"><circle cx="181" cy="170" r="7"/><circle cx="443" cy="198" r="6"/><circle cx="506" cy="202" r="6"/></g>
+<g fill="#8db7f2"><circle cx="181" cy="170" r="2.2"/></g>
 <g id="rack">
 <rect x="58" y="125" width="123" height="191" rx="9" fill="url(#rackSteel)" stroke="#6e83a8" stroke-width="1.6"/>
 <path d="M66 134H174V307H66Z" fill="#0b1424" stroke="#344764"/>
@@ -57,7 +61,7 @@
 <rect x="70" y="240" width="100" height="29" rx="4" fill="#13213a" stroke="#30466b"/>
 <rect x="70" y="276" width="100" height="24" rx="4" fill="#111f36" stroke="#30466b"/>
 <g stroke="#637fbd" stroke-opacity=".5"><path d="M81 180H117M81 185H110M81 216H117M81 221H110M81 252H117M81 257H110M81 285H118"/></g>
-<g fill="#7797ca"><circle cx="140" cy="152" r="2.1"/><circle cx="150" cy="152" r="2.1"/></g>
+
 <g fill="#75dcff"><circle class="status-led" cx="152" cy="183" r="3"/><circle class="status-led offset" cx="152" cy="219" r="3"/><circle class="status-led slow" cx="152" cy="255" r="3"/></g>
 <g fill="#7993c0"><circle cx="142" cy="183" r="2"/><circle cx="142" cy="219" r="2"/><circle cx="142" cy="255" r="2"/></g>
 <g font-family="monospace" font-size="9.5" fill="#94aed2"><text x="81" y="154">CB / RACK-01</text><text x="81" y="291">03 NODES</text></g>
@@ -75,19 +79,19 @@
 <rect class="scope" x="340" y="143" width="11" height="2" rx="1" fill="#76d1f7"/>
 <g clip-path="url(#terminalClip)" font-family="ui-monospace, monospace" font-size="9" fill="#abc5ea">
 <g class="terminal-scroll">
-<text x="222" y="162" fill="#80c4ff">$ labctl start</text>
-<text x="222" y="176">connecting nodes...</text>
-<text x="222" y="190" fill="#7fdfd8">✓ rack linked</text>
-<text x="222" y="204">01101001 11010010</text>
-<text x="222" y="218" fill="#a6b9ff">$ test storage</text>
-<text x="222" y="232" fill="#8cd9f2">stream: active</text>
-<text x="222" y="246">packet 0x4a → 0x3f</text>
-<text x="222" y="260" fill="#7fdfd8">sample collected</text>
-<text x="222" y="274" fill="#a6b9ff">$ next experiment</text>
-<text x="222" y="288">01100101 01100001</text>
-<text x="222" y="302" fill="#7fdfd8">✓ running</text>
+<text x="222" y="176" fill="#80c4ff">$ labctl start</text>
+<text x="222" y="190">connecting nodes...</text>
+<text x="222" y="204" fill="#7fdfd8">✓ rack linked</text>
+<text x="222" y="218">01101001 11010010</text>
+<text x="222" y="232" fill="#a6b9ff">$ test storage</text>
+<text x="222" y="246" fill="#8cd9f2">stream: active</text>
+<text x="222" y="260">packet 0x4a → 0x3f</text>
+<text x="222" y="274" fill="#7fdfd8">sample collected</text>
+<text x="222" y="288" fill="#a6b9ff">$ next experiment</text>
+<text x="222" y="302">01100101 01100001</text>
+<text x="222" y="316" fill="#7fdfd8">✓ running</text>
 </g></g>
-<rect class="cursor" x="221" y="232" width="5" height="1.8" fill="#9deafa"/>
+
 <path d="M277 254V270H297V254" fill="#243b5d" stroke="#405c83"/>
 <rect x="254" y="270" width="66" height="7" rx="3.5" fill="#203753" stroke="#496586"/>
 <path d="M250 281H320L330 290H240Z" fill="#1b2e48" stroke="#435b80"/>
@@ -102,7 +106,7 @@
 <path d="M399 261Q420 254 443 261T487 261" fill="none" stroke="#a9f5ff" stroke-width="2" opacity=".75"/>
 <g fill="#dcfbff"><circle class="bubble" cx="432" cy="278" r="2"/><circle class="bubble b2" cx="452" cy="284" r="2.7"/><circle class="bubble b3" cx="442" cy="272" r="1.5"/><circle class="bubble b4" cx="460" cy="274" r="1.6"/></g></g>
 <g stroke="#9ac2ec" stroke-width="1.4" opacity=".7"><path d="M460 238H467M462 247H469M465 256H472"/></g>
-<text x="442" y="311" text-anchor="middle" font-family="monospace" font-size="8.5" letter-spacing="1.1" fill="#9bb9dc">SAMPLE 01</text>
+<text x="442" y="333" text-anchor="middle" font-family="monospace" font-size="8.5" letter-spacing="1.1" fill="#9bb9dc">SAMPLE 01</text>
 </g>
 <g id="sampleB">
 <rect x="491" y="214" width="28" height="74" rx="14" fill="#7d86da" fill-opacity=".045" stroke="#afa9e6" stroke-width="2.2"/>
@@ -111,8 +115,8 @@
 <g clip-path="url(#purpleFluidClip)">
 <path class="fluid-shimmer" d="M487 248Q503 244 521 248V290H487Z" fill="url(#indigoLiquid)"/>
 <g fill="#e4d8ff"><circle class="bubble b2" cx="503" cy="272" r="1.8"/><circle class="bubble b4" cx="509" cy="280" r="2.1"/></g></g>
-<text x="505" y="311" text-anchor="middle" font-family="monospace" font-size="8.5" letter-spacing=".6" fill="#acafd9">02</text>
+<text x="506" y="333" text-anchor="middle" font-family="monospace" font-size="8.5" letter-spacing=".6" fill="#acafd9">02</text>
 </g>
-<g font-family="ui-monospace,monospace" font-size="9" fill="#7893b8" letter-spacing="1.1"><text x="58" y="116">COMPUTE</text><text x="202" y="116">CONTROL / TEST</text></g>
+<g font-family="ui-monospace,monospace" font-size="9" fill="#7893b8" letter-spacing="1"><text x="60" y="116">COMPUTE</text><text x="206" y="116">CONTROL / TEST</text></g>
 <g opacity=".72" fill="#7aa7e1"><circle cx="34" cy="142" r="1.5"/><circle cx="536" cy="126" r="1.5"/><circle cx="216" cy="72" r="1.2"/></g>
 </svg>
