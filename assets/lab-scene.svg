@@ -7,8 +7,6 @@
 <linearGradient id="deskSteel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#304567"/><stop offset="1" stop-color="#15253d"/></linearGradient>
 <linearGradient id="cyanLiquid" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#89eeff" stop-opacity=".79"/><stop offset="1" stop-color="#3175db" stop-opacity=".67"/></linearGradient>
 <linearGradient id="indigoLiquid" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c2abff" stop-opacity=".78"/><stop offset="1" stop-color="#7361df" stop-opacity=".67"/></linearGradient>
-<radialGradient id="screenBloom"><stop stop-color="#3d8fda" stop-opacity=".25"/><stop offset="1" stop-color="#3d8fda" stop-opacity="0"/></radialGradient>
-<radialGradient id="lampPool"><stop stop-color="#f7ca85" stop-opacity=".20"/><stop offset="1" stop-color="#f7ca85" stop-opacity="0"/></radialGradient>
 <filter id="pipeBloom" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
 <radialGradient id="flameHalo"><stop stop-color="#ffb86e" stop-opacity=".31"/><stop offset=".55" stop-color="#ff8d3b" stop-opacity=".12"/><stop offset="1" stop-color="#ff8d3b" stop-opacity="0"/></radialGradient>
 <linearGradient id="flameOuter" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#ed6f33"/><stop offset=".5" stop-color="#ffab4f"/><stop offset="1" stop-color="#ffd892"/></linearGradient>
@@ -36,16 +34,12 @@
 @keyframes flameGlow{from{opacity:.48;transform:scale(.91)}to{opacity:.88;transform:scale(1.1)}}
 @media(prefers-reduced-motion:reduce){.status-led,.pipe-flow,.terminal-scroll,.cursor,.bubble,.fluid-shimmer,.scope,.burner-flame,.burner-flame-inner,.burner-glow{animation:none!important}}
 </style>
-<ellipse cx="310" cy="304" rx="196" ry="67" fill="url(#screenBloom)"/>
 <ellipse cx="304" cy="357" rx="238" ry="12" fill="#5a88bf" opacity=".10"/>
 <path d="M42 365H537" fill="none" stroke="#577aa8" stroke-width="1" opacity=".28"/>
-<ellipse cx="424" cy="246" rx="122" ry="154" fill="url(#lampPool)"/>
 <g fill="none" stroke="#314462" opacity=".30" stroke-width="1"><path d="M34 106H532M34 339H532"/><path d="M50 90V329M528 95V323"/><path d="M65 373H511" stroke-dasharray="3 8"/></g>
 <path d="M435 0V52" stroke="#455f83" stroke-width="2.5"/>
 <path d="M408 69L421 47H449L463 69Z" fill="#1e304e" stroke="#6782af" stroke-width="1.4"/>
 <path d="M419 69H452" stroke="#b7cff4" stroke-opacity=".6" stroke-width="2"/>
-<ellipse cx="435" cy="73" rx="21" ry="4" fill="#ecc790" opacity=".23"/>
-<path d="M419 77L391 238H488L450 77Z" fill="#e9b976" opacity=".018"/>
 <!-- A straight overhead bus connected to the rack, with a centered drop into each vessel. -->
 <g fill="none" stroke-linejoin="round" stroke-linecap="square">
 <path d="M180 170H194V98H491" stroke="#263b5d" stroke-width="8"/>
