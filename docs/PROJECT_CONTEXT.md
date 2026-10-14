@@ -1,6 +1,6 @@
 # Project Context — Cloudboy
 
-> Handoff for a new developer or AI agent. Updated 2026-10-12. Read this before changing layout, content, navigation or deployment.
+> Handoff for a new developer or AI agent. Updated 2026-10-14. Read this before changing layout, content, navigation or deployment.
 
 ## 1. Vision and identity
 
@@ -45,10 +45,13 @@ GitHub Pages org URL (when enabled): https://cloudboy-tech.github.io
 - **No frontend framework, npm install, backend, database, cloud cluster, login or content management system.**
 - CSS, SVG illustrations, layout, navigation and JS interaction are all in **one self-contained HTML file**.
 - `.nojekyll` is committed for Pages, plus `README.md` with hosting/DNS instructions.
-- Homepage introduction: "Технологии. Системы. Связи." (Russian copy).
+- Homepage introduction: **«Лаборатория инженерных решений»**; Cloudboy is a personal experimental infrastructure lab, not a consulting business.
 - One actual interactive article, opened via the `#quorum` route: **"Кворум: когда кластер перестаёт отвечать?"**. Readers can change cluster node count, simulate failed nodes and observe how the majority threshold changes.
 - Remaining lab items (object storage and zone failure, cloud networking, resilience trade-offs) are **ideas/placeholders**, not published investigations.
-- "Support Shell" project card links to the separate https://github.com/totaki/support-shell research PoC.
+- **Support Shell** now has a standalone interactive writeup at [support-shell.html](../support-shell.html), linked from the homepage laboratory list. Its separate research source remains https://github.com/totaki/support-shell.
+  - Standalone static files: `support-shell.html`, `assets/support-shell.css`, `assets/support-shell.js`; no backend or framework.
+  - Interactive local-only illustrations: terminal command examples, CLI/AI/MCP surface switching, execution flow, WASM Host capability gate, permission matrix with simulated MCP deny rule, actual plugins (diagnostics/network plus test fixture), session-context examples, table/text/JSON views, adapter comparison, and execution timeline.
+  - All example cluster names, findings and node statuses are **synthetic**; the page performs no remote provider calls. The sandbox is not represented as fully hardened, MCP is stdio only, and the PoC is not promoted as a support product.
 - Mobile responsive layout was considered in the prototype and visually reviewed, but real browser/device compatibility should be tested again after meaningful changes.
 
 **Do not falsely describe placeholders as completed articles, real measurements or deployed infrastructure.** This is a design/content prototype, not a finished publication.
