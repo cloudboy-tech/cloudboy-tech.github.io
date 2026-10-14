@@ -8,7 +8,7 @@
 <linearGradient id="cyanLiquid" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#89eeff" stop-opacity=".79"/><stop offset="1" stop-color="#3175db" stop-opacity=".67"/></linearGradient>
 <linearGradient id="indigoLiquid" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c2abff" stop-opacity=".78"/><stop offset="1" stop-color="#7361df" stop-opacity=".67"/></linearGradient>
 <filter id="pipeBloom" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
-<radialGradient id="flameHalo"><stop stop-color="#ffb86e" stop-opacity=".31"/><stop offset=".55" stop-color="#ff8d3b" stop-opacity=".12"/><stop offset="1" stop-color="#ff8d3b" stop-opacity="0"/></radialGradient>
+
 <linearGradient id="flameOuter" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#ed6f33"/><stop offset=".5" stop-color="#ffab4f"/><stop offset="1" stop-color="#ffd892"/></linearGradient>
 <clipPath id="terminalClip"><rect x="222" y="162" width="133" height="73" rx="4"/></clipPath>
 <clipPath id="blueFluidClip"><path d="M429 203V222L405 275Q404 288 416 288H468Q480 288 479 275L453 222V203Z"/></clipPath>
@@ -22,7 +22,7 @@
 .fluid-shimmer{animation:liquidGlow 4.5s ease-in-out infinite}.scope{animation:scopePulse 4s ease-in-out infinite}
 .burner-flame{transform-box:fill-box;transform-origin:center bottom;animation:flameFlicker 1.05s ease-in-out infinite alternate}
 .burner-flame-inner{transform-box:fill-box;transform-origin:center bottom;animation:flameFlicker .75s ease-in-out infinite alternate-reverse}
-.burner-glow{animation:flameGlow 1.2s ease-in-out infinite alternate}
+
 @keyframes ledFlash{0%,60%,100%{opacity:.22}18%,40%{opacity:1}}
 @keyframes signalTravel{to{stroke-dashoffset:-112}}
 @keyframes terminalFlow{0%,13%{transform:translateY(0)}20%,33%{transform:translateY(-14px)}40%,53%{transform:translateY(-28px)}60%,73%{transform:translateY(-42px)}80%,93%{transform:translateY(-56px)}100%{transform:translateY(-70px)}}
@@ -31,8 +31,8 @@
 @keyframes liquidGlow{0%,100%{opacity:.75}50%{opacity:1}}
 @keyframes scopePulse{0%,100%{opacity:.55}50%{opacity:1}}
 @keyframes flameFlicker{0%{transform:scaleX(.86) scaleY(.92) rotate(-3deg)}33%{transform:scaleX(1.06) scaleY(1.08) rotate(2deg)}66%{transform:scaleX(.94) scaleY(.99) rotate(-1deg)}100%{transform:scaleX(1.02) scaleY(1.13) rotate(3deg)}}
-@keyframes flameGlow{from{opacity:.48;transform:scale(.91)}to{opacity:.88;transform:scale(1.1)}}
-@media(prefers-reduced-motion:reduce){.status-led,.pipe-flow,.terminal-scroll,.cursor,.bubble,.fluid-shimmer,.scope,.burner-flame,.burner-flame-inner,.burner-glow{animation:none!important}}
+
+@media(prefers-reduced-motion:reduce){.status-led,.pipe-flow,.terminal-scroll,.cursor,.bubble,.fluid-shimmer,.scope,.burner-flame,.burner-flame-inner{animation:none!important}}
 </style>
 <ellipse cx="304" cy="357" rx="238" ry="12" fill="#5a88bf" opacity=".10"/>
 <path d="M42 365H537" fill="none" stroke="#577aa8" stroke-width="1" opacity=".28"/>
@@ -132,7 +132,7 @@
   <path d="M477 190Q491 183 505 190" fill="none" stroke="#83a2cd" stroke-width="2" opacity=".7"/>
 </g>
 <g id="sampleB-burner" transform="translate(-14 0)">
-  <ellipse class="burner-glow" cx="505" cy="271" rx="31" ry="32" fill="url(#flameHalo)"/>
+
   <g class="burner-flame">
     <path d="M505 276C498 273 495 268 499 263C501 260 502 257 502 255C508 259 514 266 513 270C515 273 511 276 505 276Z" fill="url(#flameOuter)" opacity=".97"/>
   </g>
